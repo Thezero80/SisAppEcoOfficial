@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/logo1.jpg" type="image/x-icon"> <!-- Ruta al favicon -->
+    <title>App Reporte de Abuso | CCFF-ECONOMIA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script>
+        if (window.innerWidth > 1024) {
+            window.location.href = "error.html";
+        }
+        //alert("¡Hola! Bienvenido a la App de Reporte de Abuso. Por favor, Por el momento tiene funcionalidad en dispositivos moviles, Estamos en mantenimiento!.");
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.btn.btn-danger.btn-lg').addEventListener('click', function() {
+            window.location.href = 'form.html';
+            });
+            document.querySelector('.reporte').addEventListener('click', function() {
+            window.location.href = 'form.html';
+            });
+        });
+    </script> -->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent w-100" id="header-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand font-weight-bold" href="#"><img src="img/logo1.jpg" alt="" class="img-fluid"
+                    style="max-height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase position-relative reporte-link d-flex align-items-center px-2 py-1"
+                            href="form.html">
+                            <b class="reporte w-100">
+                                <span
+                                    class="d-inline-flex align-items-center animate__animated animate__pulse animate__infinite"
+                                    style="animation-duration:1.5s;">
+                                    <i class="bi bi-exclamation-circle-fill text-danger me-1 fs-5"></i>
+                                    <span class="d-none d-md-inline">Reportar un Incidente</span>
+                                    <span class="d-inline d-md-none">Reportar</span>
+                                </span>
+                            </b>
+                        </a>
+                    </li>
+                    <style>
+                        @media (max-width: 576px) {
+                            .reporte-link {
+                                font-size: 0.95rem;
+                                padding: 0.5rem 0.75rem;
+                            }
+
+                            .reporte-link .fs-5 {
+                                font-size: 1.1rem !important;
+                            }
+                        }
+
+                        @media (min-width: 577px) and (max-width: 991px) {
+                            .reporte-link {
+                                font-size: 1rem;
+                                padding: 0.6rem 1rem;
+                            }
+                        }
+
+                        .reporte-link {
+                            transition: background-color 0.2s, color 0.2s;
+                            font-weight: 600;
+                        }
+
+                        .reporte-link:hover,
+                        .reporte-link:focus,
+                        .reporte-link:active {
+                            background-color: #dc3545 !important;
+                            /* Bootstrap danger */
+                            color: #fff !important;
+                            border-radius: .25rem;
+                        }
+
+                        .reporte-link:hover .bi,
+                        .reporte-link:focus .bi,
+                        .reporte-link:active .bi {
+                            color: #fff !important;
+                        }
+                    </style>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#" data-bs-toggle="modal"
+                            data-bs-target="#contactModal">Contáctanos</a>
+                    </li>
+                    <!-- Modal -->
+                    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header bg-primary text-white">
+                                    <h5 class="modal-title" id="contactModalLabel">Contacto Responsable</h5>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                        aria-label="Cerrar"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="img/Apolinario.jpg" alt="Responsable" class="rounded-circle mb-3"
+                                        style="width: 100px; height: 100px; object-fit: cover;">
+                                    <h4 class="mb-1 text-muted">Lic. Jackeline Apolinario</h4>
+                                    <hr class="my-2 text-muted">
+                                    <p class="mb-2 text-muted">Encargada de Atención de Reportes</p>
+                                    <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+                                        <span class="badge bg-success fs-6"><i class="bi bi-telephone-fill"></i>+51
+                                            962758137</span>
+                                    </div>
+                                    <p class="mb-0 text-muted">Puedes contactarla directamente para cualquier consulta o
+                                        seguimiento de tu reporte.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-primary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bootstrap Icons CDN (for phone icon) -->
+                    <link rel="stylesheet"
+                        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="#reporte">Como Hacer EL Reporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#" data-bs-toggle="modal"
+                            data-bs-target="#aboutModal">NOSOTROS</a>
+                    </li>
+                    <!-- Modal -->
+                    <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header bg-primary text-white">
+                                    <h5 class="modal-title" id="aboutModalLabel">EQUIPO</h5>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                        aria-label="Cerrar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle mb-0 bg-white shadow-sm rounded">
+                                            <thead class="table-primary">
+                                                <tr>
+                                                    <th class="text-center">Foto</th>
+                                                    <th>Nombre</th>
+                                                    <th class="text-center">Rol</th>
+                                                    <th class="text-center">Contacto</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="animate__animated animate__fadeInUp">
+                                                    <td class="text-center">
+                                                        <img src="img/Apolinario.jpg" alt="Jackeline Apolinario"
+                                                            class="rounded-circle border border-2"
+                                                            style="width:70px; height:70px; object-fit:cover;">
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-muted">Jackeline
+                                                            Apolinario</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="badge bg-info">Atención de Reportes</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="badge bg-success"><i
+                                                                class="bi bi-telephone-fill"></i> +51 962758137</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="animate__animated animate__fadeInUp animate__delay-1s">
+                                                    <td class="text-center">
+                                                        <img src="img/TheCandorZero.jpeg" alt="Miembro 2"
+                                                            class="rounded-circle border border-2"
+                                                            style="width:70px; height:70px; object-fit:cover;">
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-muted"
+                                                            translate="no">TheCandorZero</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="badge bg-warning text-dark">Desarrollo
+                                                            Técnico</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="badge bg-success"><i
+                                                                class="bi bi-telephone-fill"></i> +51 961109122</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="animate__animated animate__fadeInUp animate__delay-2s">
+                                                    <td class="text-center">
+                                                        <img src="img/Brenda.jpg" alt="Miembro 3"
+                                                            class="rounded-circle border border-2"
+                                                            style="width:70px; height:70px; object-fit:cover;">
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-muted">Brenda Rodriguez</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="badge bg-secondary">Gestión Administrativa</span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span class="badge bg-success"><i
+                                                                class="bi bi-telephone-fill"></i> +51 925124183</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p
+                                        class="mt-3 text-center text-muted animate__animated animate__fadeIn animate__delay-3s">
+                                        Puedes contactar a cualquier miembro del equipo para consultas o seguimiento de
+                                        tu reporte.
+                                    </p>
+                                </div>
+                                <!-- Animate.css CDN for animations -->
+                                <link rel="stylesheet"
+                                    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-primary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+                <div class="navbar-spacer"></div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero2 py-5 bg-light text-center">
+        <div class="container">
+            <h1 class="display-4">Reporta tu Caso</h1>
+            <p class="lead">Tu voz es importante. Reporta con confianza y ayúdanos a crear un entorno seguro para todos.
+            </p>
+            <button class="btn btn-danger btn-lg" onclick="window.location.href='form.html'">REPORTAR</button>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://us.123rf.com/450wm/julioaldana/julioaldana1502/julioaldana150200014/36661504-alto-a-la-violencia-combatir-la-violencia-texto-espa%C3%B1ol-ilustraci%C3%B3n-de-la-mano-y-del-conjunto.jpg"
+                        class="card-img-top" alt="Violencia de género">
+                    <div class="card-body">
+                        <h2 class="card-title">¿Qué es la violencia de género?</h2>
+                        <p class="card-text">La violencia de género es cualquier acto de violencia basado en el género
+                            que resulta en daño físico, sexual o psicológico.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="img/solo.png" class="card-img-top" alt="Confianza en el reporte">
+                    <div class="card-body">
+                        <h2 class="card-title">Confianza en el reporte</h2>
+                        <p class="card-text">Tu reporte es confidencial y será tratado con la máxima seriedad para
+                            garantizar tu seguridad y bienestar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="reporte">
+                <div class="card h-100">
+                    <img src="https://webpicking.com/wp-content/uploads/2021/06/abuso-sexual-infantil.png"
+                        class="card-img-top" alt="Cómo reportar un abuso">
+                    <div class="card-body">
+                        <h2 class="card-title">Cómo reportar un abuso</h2>
+                        <p class="card-text">Para reportar un abuso, proporciona detalles claros y específicos sobre el
+                            incidente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- <main class="container my-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://us.123rf.com/450wm/julioaldana/julioaldana1502/julioaldana150200014/36661504-alto-a-la-violencia-combatir-la-violencia-texto-espa%C3%B1ol-ilustraci%C3%B3n-de-la-mano-y-del-conjunto.jpg" class="card-img-top" alt="Violencia de género">
+                    <div class="card-body"></div>
+                        <h2 class="card-title">¿Qué es la violencia de género?</h2>
+                        <p class="card-text">La violencia de género es cualquier acto de violencia basado en el género que resulta en daño físico, sexual o psicológico.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100"></div>
+                    <img src="img/solo.png" class="card-img-top" alt="Confianza en el reporte">
+                    <div class="card-body"></div>
+                        <h2 class="card-title">Confianza en el reporte</h2>
+                        <p class="card-text">Tu reporte es confidencial y será tratado con la máxima seriedad para garantizar tu seguridad y bienestar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="reporte"></div>
+                <div class="card h-100"></div>
+                    <img src="https://webpicking.com/wp-content/uploads/2021/06/abuso-sexual-infantil.png" class="card-img-top" alt="Cómo reportar un abuso">
+                    <div class="card-body"></div>
+                        <h2 class="card-title">Cómo reportar un abuso</h2>
+                        <p class="card-text">Para reportar un abuso, proporciona detalles claros y específicos sobre el incidente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main> -->
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SisAppEco | Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+    <!-- <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1>REGISTRAR DENUNCIA</h1>
+                <p>¡Hola Economista! Usted podrá registrar su queja o denuncia de dos maneras: de manera anónima o identificándose.
+                    Ingrese los datos que se le solicitan para registrar su queja o denuncia.</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="circle">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/2048px-User_icon_2.svg.png"
+                        alt="">
+                    <button class="btn btn-circle" id="sinDocu">Denuncia aquí</button>
+                </div>
+                <h3 class="text-center">SIN IDENTIFICARME</h3>
+            </div>
+            <div class="col-md-3">
+                <div class="circle">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/2048px-User_icon_2.svg.png"
+                        alt="">
+                    <button class="btn btn-circle" id="conDocu">Denuncia aquí</button>
+                </div>
+                <h3 class="text-center">IDENTIFICÁNDOME</h3>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="confia">
+                    <h2>¡CONFÍA EN NOSOTROS!</h2>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
